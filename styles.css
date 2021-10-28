@@ -1,0 +1,110 @@
+body {
+    --color-back: white;
+    --color-title-back: #55887c;
+    --color-title: #ffffff;
+    --color-theme: #ffc252;
+    --color-text: rgb(67, 66, 66);
+    --color-icon-front: #55887c;
+    --color-toolbar: #ffde59;
+    --color-toolbar-button: black;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--color-back);
+    margin: 0;
+}
+
+h1 {
+    font-size: large;
+    text-align: center;
+    background-color: var(--color-title-back);
+    color: var(--color-title);
+    margin: 0;
+    padding: 16px;
+}
+
+span.icon {
+    font-family: 'Material Icons';
+    display: inline-block;
+    font-feature-settings: 'liga';
+    margin-bottom: 0px;
+    color: var(--color-icon-front);
+    font-size: 16px;
+    vertical-align: sub;    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    margin: 5px;
+}
+
+form {
+    margin: 16px;
+    text-align: center;
+}
+
+textarea {
+    display: block;
+    width: 90%;
+    margin: 8px auto;
+    height: 60px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    text-decoration: none;
+    background-color: var(--color-toolbar);
+    color: var(--color-toolbar-button);
+    font-size: 13px;
+    padding: 8px 8px;
+    line-height: 1;
+    margin: 8px 8px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid var(--color-icon-front);
+}
+
+#notes {
+    flex-flow: column;
+    flex-wrap: nowrap;
+	align-items: stretch;
+    align-content: center;
+	justify-content: space-evenly;
+    padding-bottom: 50px;
+    color: var(--color-text);
+}
+
+#notes li {
+    margin-bottom: 16px;
+    border-top: 2px dotted var(--color-title-back);
+    padding-top: 8px;
+}
+
+#toolbar {
+    flex-wrap: wrap;
+	align-items: stretch;
+    align-content: center;
+    justify-content: space-evenly; 
+}
+
+body>#toolbar {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--color-toolbar);
+}
+
+
