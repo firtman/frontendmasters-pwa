@@ -5,7 +5,7 @@ body {
     --color-theme: #ffc252;
     --color-text: rgb(67, 66, 66);
     --color-icon-front: #55887c;
-    --color-toolbar: #ffde59;
+    --color-toolbar: #ffc252;
     --color-toolbar-button: black;
 }
 
@@ -29,6 +29,8 @@ h1 {
     color: var(--color-title);
     margin: 0;
     padding: 16px;
+    user-select: none;
+    -webkit-user-select: none;    
 }
 
 span.icon {
@@ -38,7 +40,9 @@ span.icon {
     margin-bottom: 0px;
     color: var(--color-icon-front);
     font-size: 16px;
-    vertical-align: sub;    
+    vertical-align: sub; 
+    user-select: none;
+    -webkit-user-select: none;       
 }
 
 ul {
@@ -74,6 +78,8 @@ button {
     font-weight: bold;
     border-radius: 8px;
     border: 2px solid var(--color-icon-front);
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #notes {
@@ -105,6 +111,19 @@ body>#toolbar {
     margin: 0;
     width: 100%;
     background-color: var(--color-toolbar);
+}
+
+@media (display-mode: standalone), (display-mode: minimal-ui) {
+    body>#toolbar {
+        padding: env(safe-area-inset-top) 
+            env(safe-area-inset-right) 
+            env(safe-area-inset-bottom) 
+            env(safe-area-inset-left) !important;
+    }
+
+    #itemInstall {
+        display: none;
+    }
 }
 
 
