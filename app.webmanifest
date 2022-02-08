@@ -1,0 +1,28 @@
+{
+  "name": "Codepad Masters, PWA development",
+  "short_name": "Codepad",
+  "start_url": "./?utm_source=pwa",
+  "orientation": "portrait",
+  "theme_color": "#ffc252",
+  "scope": "./",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+       "src": "icons/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+       "src": "icons/maskable_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+
+  ]
+}
