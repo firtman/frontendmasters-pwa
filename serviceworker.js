@@ -17,8 +17,6 @@ self.addEventListener("install", event => {
 
 // State while revalidate strategy
 self.addEventListener('fetch', event => {
-  if (event.request.url.startsWith('http')) {
-    // only process http & https requests, prevents chrome-extention errors
     event.respondWith(
       caches.match(event.request)
         .then(cachedResponse => {
@@ -35,7 +33,7 @@ self.addEventListener('fetch', event => {
           return cachedResponse || fetchPromise; // cached or a network fetch
         })
     );
-  }
+  
     }); 
 
     // Cache first strategy
