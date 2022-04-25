@@ -1,0 +1,112 @@
+Finally, we have to update our `OrderPage` so it can render its content. We will start by creating a simple view for when the cart is empty, then the CartItem that we will repeat for every item, and the LazyColumn that will render all its contents.
+
+
+# EmptyCart
+```
+@Composable
+fun EmptyCart() {
+    Card(
+        elevation = 4.dp,
+        modifier = Modifier
+            .padding(16.dp)
+    ) {
+        Text(
+            text = "There are no items in your cart. Use the menu section to add items.",
+            modifier = Modifier.padding(16.dp)
+        )
+    }
+}
+```
+
+# CartItem
+```kotlin
+@Composable
+fun CartItem(it: ItemInCart, onDelete: (Product)->Unit) {
+    Row(
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth()
+
+    ) {
+        Text("${it.quantity}x")
+        Text(it.product.name,
+            modifier = Modifier.width(150.dp)
+        )
+        Text("$${(it.quantity*it.product.price).format(2)}",
+            modifier = Modifier.width(50.dp)
+        )
+        Image(
+            imageVector = Icons.Filled.Delete,
+            contentDescription = "Delete",
+            colorFilter = ColorFilter.tint(Primary),
+            modifier = Modifier.clickable {
+                onDelete(it.product)
+            }
+        )
+    }
+}
+```
+
+# OrderPage
+
+```kotlin
+@Composable
+fun OrderPage(dataManager: DataManager) {
+    if (dataManager.cart.isEmpty()) {
+        EmptyCart()
+    } else {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                .fillMaxWidth()
+        ) {
+            Card(
+                backgroundColor = CardBackground,
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .padding(16.dp)
+            ) {
+                LazyColumn() {
+                    item {
+                        Text("ITEMS",
+                            color = Alternative1,
+                            modifier = Modifier.padding(16.dp, 16.dp, 0.dp, 4.dp)
+                        )
+                    }
+                    items(dataManager.cart) {
+                        CartItem(it) {
+                            dataManager.cartRemove(it)
+                        }
+                    }
+                }
+            }
+            Text("Total    $${dataManager.cartTotal().format(2)}",
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold,
+                fontSize = 22.sp,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            Spacer(modifier = Modifier.height(40.dp))
+            val context = LocalContext.current
+            Button(
+                onClick = {
+                    dataManager.cartClear()
+                    Toast.makeText(
+                        context,
+                        "Your Order is being prepared",
+                        Toast.LENGTH_LONG
+                    ).show()
+                },
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = Alternative1,
+                    contentColor = Color.White
+                ),
+                modifier = Modifier.width(200.dp)
+            ) {
+                Text("Place Order")
+            }
+        }
+    }
+}
+```

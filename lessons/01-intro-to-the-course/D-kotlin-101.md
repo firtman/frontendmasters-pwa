@@ -1,0 +1,1 @@
+To follow the Kotlin 101 section of this course, [download the companion assets]((/intro-android/assets.zip) and open the folder `Kotlin101` in Android Studio. You will find a series of `kts` files (Kotlin scratch files).

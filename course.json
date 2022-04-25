@@ -1,0 +1,17 @@
+{
+  "author": {
+    "name": "Maximiliano Firtman",
+    "company": "firt.dev"
+  },
+  "title": "Introduction to Kotlin and Android app development",
+  "subtitle": "for Frontend Masters",
+  "frontendMastersLink": "https://frontendmasters.com/courses/",
+  "social": {
+    "linkedin": "firtman",
+    "github": "firtman",
+    "twitter": "firt"
+  },
+  "description": "Workshop for Frontend Masters to learn Kotlin and Android app development with Jetpack Compose",
+  "keywords": ["kotlin", "android development", "jetpack compose", "mobile apps"],
+  "productionBaseUrl": "/intro-android"
+}
