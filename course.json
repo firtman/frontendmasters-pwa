@@ -13,5 +13,5 @@
   },
   "description": "Workshop for Frontend Masters to learn Kotlin and Android app development with Jetpack Compose",
   "keywords": ["kotlin", "android development", "jetpack compose", "mobile apps"],
-  "productionBaseUrl": "/intro-android"
+  "productionBaseUrl": "/intro-kotlin"
 }

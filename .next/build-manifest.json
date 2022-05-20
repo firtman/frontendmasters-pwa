@@ -1,39 +1,39 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-5cd94c89d3acac5f.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/ppQ3LMrJWVThX3cAuwRKe/_buildManifest.js",
-    "static/ppQ3LMrJWVThX3cAuwRKe/_ssgManifest.js",
-    "static/ppQ3LMrJWVThX3cAuwRKe/_middlewareManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_middlewareManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/webpack-5abd539560f1bd0c.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-99dc7807f9c805d4.js",
-      "static/chunks/pages/index-253dfe9a17600a1e.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
     ],
     "/_app": [
-      "static/chunks/webpack-5abd539560f1bd0c.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-99dc7807f9c805d4.js",
-      "static/css/dd3a156ae8df4e80.css",
-      "static/chunks/pages/_app-fd42b2862056968d.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack-5abd539560f1bd0c.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-99dc7807f9c805d4.js",
-      "static/chunks/pages/_error-1995526792b513b2.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ],
     "/lessons/[section]/[slug]": [
-      "static/chunks/webpack-5abd539560f1bd0c.js",
-      "static/chunks/framework-5f4595e5518b5600.js",
-      "static/chunks/main-99dc7807f9c805d4.js",
-      "static/chunks/pages/lessons/[section]/[slug]-112e611e7e40a9a8.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/lessons/[section]/[slug].js"
     ]
   },
   "ampFirstPages": []
