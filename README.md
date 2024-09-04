@@ -1,5 +1,13 @@
-## Code for the [Progressive Web Apps (PWAs) course](https://frontendmasters.com/courses/pwas/) with Frontend Masters by Maximiliano Firtman
+## PWAs: You Might Not Need That App Store
 
-Initial starting code for the course is on the `starting-code` branch. 
+This is a companion repository for the [PWAs: You Might Not Need That App Store](https://frontendmasters.com/courses/pwas-v2/) course on Frontend Masters by Maximiliano Firtman
 
-`git checkout starting-code` to get to the starting files.
+### Getting Started
+
+The `main` branch contains the final, full-featured application. To follow along with the course, use the code on the `starting-code` branch:
+
+```bash
+git clone https://github.com/firtman/frontendmasters-pwa.git
+git checkout starting-code
+```
+
