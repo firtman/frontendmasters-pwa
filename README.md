@@ -1,6 +1,6 @@
-## Progressive Web Apps: You Don’t Need That App Store
+## PWAs: You Might Not Need That App Store
 
-This is a companion repository for the [Progressive Web Apps: You Don’t Need That App Store](https://frontendmasters.com/courses/pwas-v2/) course on Frontend Masters by Maximiliano Firtman
+This is a companion repository for the [PWAs: You Might Not Need That App Store](https://frontendmasters.com/courses/pwas-v2/) course on Frontend Masters by Maximiliano Firtman
 
 ### Getting Started
 
